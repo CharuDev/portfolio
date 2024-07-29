@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    color: aliceblue;
+    cursor: pointer;
+   
+}
+
+#nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+  padding: 30px;
+}
+
+#nav {
+    height: 19vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+#nav-left img {
+    width: 130px;
+    padding-top: 35px;
+}
+#nav-right ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+li {
+    list-style-type: none;
+}
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+video {
+    margin: 0;
+    height: 100%; /* Adjust height to cover the remaining viewport */
+    width: 100%;
+    object-fit: cover;
+    position: absolute; /* Position the video absolutely within its container */
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#page1-inner {
+    position: relative; /* Position the inner content relatively */
+    z-index: 2;
+    display: flex;
+    flex-direction: column; /* Change to column to stack items vertically */
+    justify-content: center; /* Center content vertically */
+    height: calc(100vh - 12vh); /* Ensure it spans the remaining viewport height */
+}
+#page1-inner h1 {
+    margin-left: 7vw;
+    font-size: 8vh;
+    padding-top: 7vh;
+}
+#page1-inner h2 {
+    margin-left: 7vw;
+    padding-top: 3vh;
+    font-size: 6vh;
+}
+#page1-inner button {
+    width: 25vw;
+    height: 7vh;
+    margin-top: 5vh;
+    margin-left: 7vw;
+    border-radius: 20px;
+}
+
+
+#page2 {
+    margin-top: 0;
+    width: 100vw;
+    height: auto; /* Ensure it spans the full viewport height */
+    position: relative;
+    background-color: black;
+}
+#page2-first {
+    border-bottom: 2px solid white;
+}
+#page2-first h1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 35px;
+    font-size: 5vw;
+}
+#page2-first p{
+    padding: 10vw;
+    padding-top: 5vw;
+}
+
+#page2-second {
+    height: auto;
+    width: 100vw;
+    background-color: black; /* Light background for contrast */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#page2-second h1 {
+    font-size: 5vw;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .skill-card {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-card {
+        width: calc(50% - 20px);
+    }
+}
+
+#page3{
+    height: auto;
+    width: 100vw;
+    background-color: black;
+    padding-bottom: 20px;
+}
+#page3 h1{
+    padding-top: 4vw;
+    text-align: center;
+    color: white;
+}
+.card-container {
+    margin: 20px;
+    display: flex;
+    /* max-width: 300px;  */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: black;
+}
+.card {
+    flex: 1 1 calc(33.33% - 40px); 
+    padding: 20px;
+    max-width: 250px; /* Set a max-width for better appearance on larger screens */
+    
+    box-sizing: border-box;
+    background: white;
+    border-radius: 15px;
+    
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.card img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#page4{
+    height: auto;
+    width: 100vw;
+    background-color: black;
+    color: white;
+   text-align: center;
+   padding: 20px;
+}
+#page4-form{
+    padding: 20px;
+    height: auto;
+    width: 100vw;
+    background-color: black;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.form {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: auto;
+  padding: 20px;
+  width: 320px;
+}
+
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.ic1 {
+  margin-top: 40px;
+}
+
+.ic2 {
+  margin-top: 30px;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.cut {
+  background-color: #15172b;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 76px;
+}
+
+.cut-short {
+  width: 50px;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 20px;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #dc2f55;
+}
+
+.submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+   outline: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* body {
+  display: flex;
+  background: #333;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 100vh;
+} */
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px){
+    .card {
+        flex: 1 1 calc(100% - 20px);
+    }}
